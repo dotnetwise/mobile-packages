@@ -5,16 +5,18 @@ document.addEventListener("resume", function () {
   hasResumed = true;
 }, false);
 
-Reload._onMigrate(function (retry) {
+Reload._onMigrate('onresume', onMigrate);
+function onMigrate(retry) {
+	console.log("hot-code-push downloaded", newVersionAvailable.get());
   newVersionAvailable.set(newVersionAvailable.get() + 1);
-
+	//Reload._onMigrate(onMigrate);
   if (hasResumed) {
     return [true, {}];
   } else {
     document.addEventListener("resume", retry, false);
     return [false];
   }
-});
+}
 
 /**
  * @summary Reactive function that returns true when there is a new version of

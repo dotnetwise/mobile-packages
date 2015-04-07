@@ -1,5 +1,5 @@
 base64@1.0.3
-dotnetwise:reload-on-resume@1.0.5
+dotnetwise:reload-on-resume@1.0.8
 ejson@1.0.6
 json@1.0.3
 logging@1.0.7
