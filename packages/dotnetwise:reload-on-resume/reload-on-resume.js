@@ -12,7 +12,7 @@ function onMigrate(retry) {
   newVersionAvailable.set(newVersionAvailable.get() + 1);
   //Reload._onMigrate(onMigrate);
   if (hasResumed.get()) {
-    return [true, {}];
+    return Reload._onResume ? Reload._onResume() : [true, {}];
   } else {
     document.addEventListener("resume", retry, false);
     return [false];
