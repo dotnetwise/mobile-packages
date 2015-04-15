@@ -1,7 +1,7 @@
 Package.describe({
   name: "dotnetwise:reload-on-resume",
   summary: "Only allow the app to reload when the app is resumed, both in Cordova/browser.",
-  version: '1.0.9',
+  version: '1.0.10',
   git: "https://github.com/dotnetwise/mobile-packages"
 });
 
