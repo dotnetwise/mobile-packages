@@ -14,7 +14,7 @@ function onMigrate(retry) {
   if (hasResumed.get()) {
     return Reload._onResume ? Reload._onResume() : [true, {}];
   } else {
-    document.addEventListener("resume", retry, false);
+    document.addEventListener("resume", Reload._onResume ? Reload._onResume(retry) : retry, false);
     return [false];
   }
 }
