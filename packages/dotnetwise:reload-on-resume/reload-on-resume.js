@@ -27,6 +27,6 @@ function onMigrate(retry) {
 Reload.hasResumed = function () {
   return hasResumed.get();
 };
-Reload.hasResumed = function () {
+Reload.isWaitingForResume = function () {
   return newVersionAvailable.get();
 };
